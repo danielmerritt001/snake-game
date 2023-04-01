@@ -12,6 +12,7 @@ let boardEl = document.getElementById('board')
 console.log(boardEl)
 let scoreEl = document.getElementById('score')
 let resetEl = document.getElementById('reset')
+let sqEl =document.querySelectorAll('.sq')
 
 /*----------constants----------*/
 let snake= {
@@ -23,12 +24,12 @@ let loss = false
 let piece = null
 
 /*---------event listeners----*/
-boardEl.addEventListener('click', function(){
-  if (event.target.className === "sq"){
-    event.target.className += " snake"
-    console.log(event.target)
-  }
-})
+// boardEl.addEventListener('click', function(){
+//   if (event.target.className === "sq"){
+//     event.target.className += " snake"
+//     console.log(event.target)
+//   }
+// })
 let keyPress = document.addEventListener('keydown', (event) => {
   //prevent the arrow keys from moving the page
   if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(event.code) > -1) {
@@ -41,16 +42,21 @@ resetEl.addEventListener('click', init)
 
 /*----------functions----------*/
 init()
-
 function init() {
   snake.size =["8H"]
+  snake.direction= null
+  
 }
 function sanityCheck() {
   console.log(event.target)
 }
-
+render()
 function render() {
-
+  sqEl.forEach(function(sq) {
+    if (snake.size.includes(sq.id)) {
+      sq.className += " snake"
+    }
+  })
 }
 /*----------movement functions----------*/
 function up() {
@@ -93,7 +99,9 @@ function changeDirection(key) {
   }
 }
 
-
+function snakeMovement(){
+  
+}
 
 //// Build the html screen
 //// Flexbox row with two items
