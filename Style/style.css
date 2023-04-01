@@ -1,4 +1,6 @@
-
+/*{
+  background-image: url("/Assets/Images/garden.jpg");
+}*/
 
 header{
   display: flex;
@@ -11,7 +13,7 @@ header{
 #score-reset {
   background-color: blue;
 }
-#game{
+#board{
   display: grid;
   grid-template-columns: repeat(16, 40px [col-start]);
   justify-content: center;
@@ -23,4 +25,7 @@ header{
   height: 40px;
   width: 40px;
   border: solid black;
+}
+.snake{
+  background-color: green;
 }
