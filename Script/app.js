@@ -14,10 +14,12 @@ let snake= {
   direction: null,
   size: ["8H"]
 }
+let score = 0
 let win = false
 let loss = false 
 let piece = null
 
+scoreEl.innerHTML= `Score: ${score}`
 /*---------event listeners----*/
 // boardEl.addEventListener('click', function(){
   //   if (event.target.className === "sq"){
@@ -25,64 +27,74 @@ let piece = null
     //     console.log(event.target)
     //   }
     // })
-    let keyPress = document.addEventListener('keydown', (event) => {
+let keyPress = document.addEventListener('keydown', (event) => {
       //prevent the arrow keys from moving the page
-      if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(event.code) > -1) {
-        event.preventDefault();
-      }
-      changeDirection(event.key)
-    }, false)
+  if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(event.code) > -1) {
+    event.preventDefault();
+  }
+  changeDirection(event.key)
+}, false)
     
-    resetEl.addEventListener('click', init)
+resetEl.addEventListener('click', init)
     
-    /*----------functions----------*/
-    init()
-    function init() {
-      snake.size =["8H"]
-      snake.direction= null
-      
+/*----------functions----------*/
+init()
+function init() {
+  snake.size =["8H"]
+  snake.direction= null
+  newPiece()
+  render()
+}
+function render() {
+  sqEl.forEach(function(sq) {
+    if (snake.size.includes(sq.id)) {
+      sq.className += " snake"
+    } else {
+      sq.className = "sq"
     }
-    function sanityCheck() {
-      console.log(event.target)
+    if (snake.size[0] === piece) {
+      score += 1
+      sq.removeAttribute(" piece")
+      newPiece()
+      scoreEl.innerHTML= `Score: ${score}`
+    } 
+    if (sq.id === piece) {
+      sq.className += " piece"
     }
-    render()
-    function render() {
-      sqEl.forEach(function(sq) {
-        if (snake.size.includes(sq.id)) {
-          sq.className += " snake"
-        } else {
-          sq.className = "sq"
-        }
-      })
-    }
-    /*----------movement functions----------*/
-    function up() {
-      if (snake.direction !== "down") {
-        snake.direction = "up"
-      }
-      console.log(snake.direction)
-      console.log("up")
-    }
-    function down() {
-      if (snake.direction !== "up") {
-        snake.direction = "down"
-      }
-      console.log(snake.direction)
-      console.log("down")
-    }
-    function left() {
-      if (snake.direction !== "right") {
+  })
+}
+function newPiece () {
+  let number = Math.floor(Math.random() * 16 + 1)
+  let letter = String.fromCharCode(Math.floor(Math.random() * 16 + 65))
+  piece = number.toString() + letter
+}
+
+function checkWin() {
+
+}
+function checkLoss() {
+
+}
+/*----------movement functions----------*/
+function up() {
+  if (snake.direction !== "down") {
+    snake.direction = "up"
+  }
+}
+function down() {
+  if (snake.direction !== "up") {
+    snake.direction = "down"
+  }
+}
+function left() {
+  if (snake.direction !== "right") {
         snake.direction = "left"
       }
-      console.log(snake.direction)
-      console.log("left")
     }
     function right() {
       if (snake.direction !== "left") {
         snake.direction = "right"
       }
-      console.log(snake.direction)
-      console.log("right")
     }
     function changeDirection(key) {
       if (key === "ArrowUp") {
@@ -100,59 +112,34 @@ let piece = null
     function snakeMovement(){
       //if statements for up. reverse alphabetical order
       if (snake.direction === "up") {
-        let letter = snake.size[0].split("")[1]
+        let letter = snake.size[0].slice(-1)
         let newLetter = String.fromCharCode(letter.codePointAt(0) - 1)
         let newSquare = snake.size[0].replace(letter, newLetter)
         snake.size.unshift(newSquare)
-        snake.size.pop()
       } else if (snake.direction === "down"){
         //if statement for down. regular alphabetical order
-        let letter = snake.size[0].split("")[1]
+        let letter = snake.size[0].slice(-1)
         let newLetter = String.fromCharCode(letter.codePointAt(0) + 1)
         let newSquare = snake.size[0].replace(letter, newLetter)
         snake.size.unshift(newSquare)
-        snake.size.pop()
       } else if (snake.direction === "left"){
         //if statement for left. reverse numerical order.
-        let number = snake.size[0].split("")[0]
+        let number = snake.size[0].slice(0,-1)
         let newNumber = parseInt(number) - 1
         let newSquare = snake.size[0].replace(number, newNumber)
         snake.size.unshift(newSquare)
-        snake.size.pop()
       } else if (snake.direction === "right") {
         //if statement for right. regular numerical order.
-        let number = snake.size[0].split("")[0]
+        let number = snake.size[0].slice(0,-1)
         let newNumber = parseInt(number) + 1
         let newSquare = snake.size[0].replace(number, newNumber)
         snake.size.unshift(newSquare)
+      }
+      if ((snake.size[0] !== piece) && (snake.direction !== null)) {
         snake.size.pop()
       }
       render()
     }
-
-    // let square ="1A"
-    // let letter = (square.split("")[1])
-    // let newLetter = String.fromCharCode(letter.codePointAt(0) + 1)
-    // newSquare = square.replace(letter, newLetter)
-    // console.log(newSquare)
-    
-    // let testArray = ["7C","8C"]
-    // let XAxis = testArray[0].split("")[1]
-    // let newXAxis = String.fromCharCode(XAxis.codePointAt(0) + 1)
-    // let newSpot = testArray[0].replace(XAxis, newXAxis)
-    // console.log(newSpot)
-    // testArray.unshift(newSpot)
-    // testArray.pop()
-    // console.log(testArray)
-    
-    // let testArray = ["7C","8C"]
-    // let XAxis = testArray[0].split("")[0]
-    // let newXAxis = parseInt(XAxis) - 1
-    // let newSpot = testArray[0].replace(XAxis, newXAxis)
-    // console.log(newSpot)
-    // testArray.unshift(newSpot)
-    // testArray.pop()
-    // console.log(testArray)
 
 
     //// Build the html screen
@@ -180,13 +167,13 @@ let piece = null
 //// Win = false
 //// piece
 //// Create an event listener for the keyboard that runs the snake movement functions
-// Create a function ran via intervals that moves the snake in the direction it is going
+//// Create a function ran via intervals that moves the snake in the direction it is going
 //// Create an event listener for the reset button that runs init()
-// Make a function that shift(“the square in the direction the snake is moving”). Add snake as an id to squares the snake array is on
-// If the snake has NOT eaten, pop() to remove the end of the snake. use the return of the snake.pop() to remove the snake id of the corresponding square
-// Create a function that runs when the snakehead touches a piece, adding score and removing the piece. 
-// Create a function that creates a piece in a non#snake space when there is no piece on the board
-// Create a render function to render changes of piece and snake placement  on screen
+//// Make a function that shift(“the square in the direction the snake is moving”). Add snake as an id to squares the snake array is on
+//// If the snake has NOT eaten, pop() to remove the end of the snake. use the return of the snake.pop() to remove the snake id of the corresponding square
+//// Create a function that runs when the snakehead touches a piece, adding score and removing the piece. 
+//// Create a function that creates a piece in a non#snake space when there is no piece on the board
+//// Create a render function to render changes of piece and snake placement  on screen
 // Create a check for loss function if the snake hits a square with a snake “id” or hits the wall
 // Create a check for win function if the snake is the size of the board. array.length=256. Add fun win sounds and confetti-like stuff
 // Style.css
