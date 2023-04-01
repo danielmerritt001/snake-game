@@ -1,0 +1,26 @@
+
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#title{
+  background-color: green;
+}
+#score-reset {
+  background-color: blue;
+}
+#game{
+  display: grid;
+  grid-template-columns: repeat(16, 40px [col-start]);
+  justify-content: center;
+  margin:20px
+}
+.sq {
+  grid-template-columns: 16fr 16fr;
+  background-color: purple;
+  height: 40px;
+  width: 40px;
+  border: solid black;
+}
