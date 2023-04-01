@@ -88,58 +88,58 @@ function down() {
 }
 function left() {
   if (snake.direction !== "right") {
-        snake.direction = "left"
-      }
-    }
-    function right() {
-      if (snake.direction !== "left") {
-        snake.direction = "right"
-      }
-    }
-    function changeDirection(key) {
-      if (key === "ArrowUp") {
-        up()
-      } else if (key === "ArrowDown") {
-        down()
-      } else if (key === "ArrowLeft") {
-        left()
-      } else if (key === "ArrowRight") {
-        right()
-      }
-    }
-    
-    setInterval(snakeMovement, 500) 
-    function snakeMovement(){
-      //if statements for up. reverse alphabetical order
-      if (snake.direction === "up") {
-        let letter = snake.size[0].slice(-1)
-        let newLetter = String.fromCharCode(letter.codePointAt(0) - 1)
-        let newSquare = snake.size[0].replace(letter, newLetter)
-        snake.size.unshift(newSquare)
-      } else if (snake.direction === "down"){
-        //if statement for down. regular alphabetical order
-        let letter = snake.size[0].slice(-1)
-        let newLetter = String.fromCharCode(letter.codePointAt(0) + 1)
-        let newSquare = snake.size[0].replace(letter, newLetter)
-        snake.size.unshift(newSquare)
-      } else if (snake.direction === "left"){
-        //if statement for left. reverse numerical order.
-        let number = snake.size[0].slice(0,-1)
-        let newNumber = parseInt(number) - 1
-        let newSquare = snake.size[0].replace(number, newNumber)
-        snake.size.unshift(newSquare)
-      } else if (snake.direction === "right") {
-        //if statement for right. regular numerical order.
-        let number = snake.size[0].slice(0,-1)
-        let newNumber = parseInt(number) + 1
-        let newSquare = snake.size[0].replace(number, newNumber)
-        snake.size.unshift(newSquare)
-      }
-      if ((snake.size[0] !== piece) && (snake.direction !== null)) {
-        snake.size.pop()
-      }
-      render()
-    }
+    snake.direction = "left"
+  }
+}
+function right() {
+  if (snake.direction !== "left") {
+    snake.direction = "right"
+  }
+}
+function changeDirection(key) {
+  if (key === "ArrowUp") {
+    up()
+  } else if (key === "ArrowDown") {
+    down()
+  } else if (key === "ArrowLeft") {
+    left()
+  } else if (key === "ArrowRight") {
+    right()
+  }
+}
+
+setInterval(snakeMovement, 500) 
+function snakeMovement(){
+  //if statements for up. reverse alphabetical order
+  if (snake.direction === "up") {
+    let letter = snake.size[0].slice(-1)
+    let newLetter = String.fromCharCode(letter.codePointAt(0) - 1)
+    let newSquare = snake.size[0].replace(letter, newLetter)
+    snake.size.unshift(newSquare)
+  } else if (snake.direction === "down"){
+    //if statement for down. regular alphabetical order
+    let letter = snake.size[0].slice(-1)
+    let newLetter = String.fromCharCode(letter.codePointAt(0) + 1)
+    let newSquare = snake.size[0].replace(letter, newLetter)
+    snake.size.unshift(newSquare)
+  } else if (snake.direction === "left"){
+    //if statement for left. reverse numerical order.
+    let number = snake.size[0].slice(0,-1)
+    let newNumber = parseInt(number) - 1
+    let newSquare = snake.size[0].replace(number, newNumber)
+    snake.size.unshift(newSquare)
+  } else if (snake.direction === "right") {
+    //if statement for right. regular numerical order.
+    let number = snake.size[0].slice(0,-1)
+    let newNumber = parseInt(number) + 1
+    let newSquare = snake.size[0].replace(number, newNumber)
+    snake.size.unshift(newSquare)
+  }
+  if ((snake.size[0] !== piece) && (snake.direction !== null)) {
+    snake.size.pop()
+  }
+  render()
+}
 
 
     //// Build the html screen
