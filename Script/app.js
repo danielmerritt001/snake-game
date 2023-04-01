@@ -1,4 +1,4 @@
-
+// IDEA!!! CHANGE THE MOVEMENT FUNCTIONS TO EXIST WITHIN THE INTERVAL FUNCTION SO THAT PEOPLE CANT CHEAT AND GO THROUGH THEMSELVES
 
 //import { changeDirection } from "./snake.js"
 
@@ -36,7 +36,8 @@ let keyPress = document.addEventListener('keydown', (event) => {
 }, false)
     
 resetEl.addEventListener('click', init)
-    
+/*----------Losing Positions----------*/
+let losingBlocks = ["0A", "0B", "0C", "0D", "0E", "0F", "0E", "0F", "0G", "0H", "0I", "0J", "0K", "0L", "0M", "0N", "0O", "0P", "17A", "17B", "17C", "17D", "17E", "17F", "17G", "17H", "17I", "17J", "17K", "17L", "17M", "17N", "17O", "17P","1@", "2@", "3@", "4@", "5@", "6@", "7@", "8@", "9@", "10@", "11@", "12@", "13@", "14@", "15@", "16@", "1Q", "2Q", "3Q", "4Q", "5Q", "5Q", "6Q", "7Q", "8Q", "9Q", "10Q", "11Q", "12Q", "13Q", "14Q", "15Q", "16Q"]
 /*----------functions----------*/
 init()
 function init() {
@@ -62,18 +63,24 @@ function render() {
       sq.className += " piece"
     }
   })
+  checkLoss()
+  
 }
 function newPiece () {
   let number = Math.floor(Math.random() * 16 + 1)
   let letter = String.fromCharCode(Math.floor(Math.random() * 16 + 65))
   piece = number.toString() + letter
 }
-
+console.log(String.fromCharCode(65))
 function checkWin() {
 
 }
 function checkLoss() {
-
+  loss = losingBlocks.some(function(square) {
+    return square === snake.size[0]
+  })
+  console.log(loss)
+  //need loss if the snake touches itself
 }
 /*----------movement functions----------*/
 function up() {
