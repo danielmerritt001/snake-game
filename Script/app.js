@@ -53,9 +53,12 @@ function init() {
 }
 function render() {
   sqEl.forEach(function(sq) {
-    if (snake.size.includes(sq.id)) {
-      sq.className += " snake"
-    } else {
+    if (snake.size.includes(sq.id) && !(sq.id === snake.size[0])) {
+      sq.className = "sq snake"
+    } else if (sq.id === snake.size[0]) {
+      sq.className += ` snakehead-${snake.direction}`
+    }
+    else {
       sq.className = "sq"
     }
     if (snake.size[0] === piece) {
