@@ -43,8 +43,11 @@ init()
 function init() {
   snake.size =["8H"]
   snake.direction= null
+  score = 0
+  scoreEl.innerHTML = `Score: ${score}`
   newPiece()
   render()
+  console.log(score)
 }
 function render() {
   sqEl.forEach(function(sq) {

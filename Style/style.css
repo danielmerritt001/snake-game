@@ -15,12 +15,12 @@ header{
   width: 150px;
 }
 #score-reset {
-  background-color: blue;
   height: 75px;
   width: 150px;
 }
 #score {
   font-size: 33px;
+  text-align: center;
   border: solid white;
   color: white;
   background-color: black;
