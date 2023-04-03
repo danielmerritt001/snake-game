@@ -4,7 +4,6 @@
 
 /*-----cached elements-----*/
 let boardEl = document.getElementById('board')
-console.log(boardEl)
 let scoreEl = document.getElementById('score')
 let resetEl = document.getElementById('reset')
 let sqEl =document.querySelectorAll('.sq')
@@ -47,7 +46,6 @@ function init() {
   scoreEl.innerHTML = `Score: ${score}`
   newPiece()
   render()
-  console.log(score)
 }
 function render() {
   sqEl.forEach(function(sq) {
@@ -66,32 +64,33 @@ function render() {
       sq.className += " piece"
     }
   })
+  checkWin()
   checkLoss()
-  
 }
 function newPiece () {
   let number = Math.floor(Math.random() * 16 + 1)
   let letter = String.fromCharCode(Math.floor(Math.random() * 16 + 65))
   piece = number.toString() + letter
 }
-console.log(String.fromCharCode(65))
-function checkWin() {
 
-}
 function checkLoss() {
   let filterArray = snake.size.filter(function(squ){
     return squ === snake.size[0]
   })
   if (filterArray.length > 1) {
     loss = true
-    console.log(loss)
     return
   }
   loss = losingBlocks.some(function(square) {
     return square === snake.size[0]
   })
-  console.log(loss)
   //need loss if the snake touches itself
+}
+
+function checkWin(){
+  if (snake.size.length === 256) {
+    win = true
+  }
 }
 
 /*----------movement functions----------*/
@@ -129,7 +128,7 @@ function changeDirection(key) {
 
 let movementID = setInterval(snakeMovement, 500) 
 function snakeMovement(){
-  if(loss === true) {
+  if(loss === true || win === true) {
     clearInterval(movementID)
     return
   }
