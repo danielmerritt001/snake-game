@@ -7,13 +7,29 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 #title{
   background-color: green;
+  height: 75px;
+  width: 150px;
 }
 #score-reset {
   background-color: blue;
+  height: 75px;
+  width: 150px;
 }
+#score {
+  font-size: 33px;
+  border: solid white;
+  color: white;
+  background-color: black;
+}
+#reset {
+  height: 30px;
+  width: 100%;
+}
+
 #board{
   display: grid;
   grid-template-columns: repeat(16, 40px [col-start]);
@@ -28,8 +44,9 @@ header{
   border: solid black;
 }
 .piece{
-  background-color: yellow;
-}
+  background-image: url("/Assets/Images/apple.png");
+  background-size: 100%;
+} 
 .snake{
   background-color: green;
 }
