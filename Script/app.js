@@ -17,6 +17,7 @@ let score = 0
 let win = false
 let loss = false 
 let piece = null
+let movementID
 
 scoreEl.innerHTML= `Score: ${score}`
 /*---------event listeners----*/
@@ -44,6 +45,8 @@ function init() {
   snake.direction= null
   score = 0
   scoreEl.innerHTML = `Score: ${score}`
+  clearInterval(movementID)
+  movementID = setInterval(snakeMovement, 500) 
   newPiece()
   render()
 }
@@ -126,7 +129,7 @@ function changeDirection(key) {
   }
 }
 
-let movementID = setInterval(snakeMovement, 500) 
+
 function snakeMovement(){
   if(loss === true || win === true) {
     clearInterval(movementID)
