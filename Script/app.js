@@ -79,12 +79,21 @@ function checkWin() {
 
 }
 function checkLoss() {
+  let filterArray = snake.size.filter(function(squ){
+    return squ === snake.size[0]
+  })
+  if (filterArray.length > 1) {
+    loss = true
+    console.log(loss)
+    return
+  }
   loss = losingBlocks.some(function(square) {
     return square === snake.size[0]
   })
   console.log(loss)
   //need loss if the snake touches itself
 }
+
 /*----------movement functions----------*/
 function up() {
   if (snake.direction !== "down") {
@@ -118,8 +127,12 @@ function changeDirection(key) {
   }
 }
 
-setInterval(snakeMovement, 500) 
+let movementID = setInterval(snakeMovement, 500) 
 function snakeMovement(){
+  if(loss === true) {
+    clearInterval(movementID)
+    return
+  }
   //if statements for up. reverse alphabetical order
   if (snake.direction === "up") {
     let letter = snake.size[0].slice(-1)
