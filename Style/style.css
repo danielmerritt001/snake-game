@@ -1,5 +1,5 @@
 body{
-  background-image: url("/Assets/Images/garden.jpg");
+  background-image: url("../Assets/Images/garden.jpg");
   background-size: 100%;
 }
 main {
@@ -50,7 +50,7 @@ header{
 }
 .piece{
   z-index: 2;
-  background-image: url("/Assets/Images/apple.png");
+  background-image: url("../Assets/Images/apple.png");
   background-size: 100%;
   border: solid black
 } 
@@ -58,26 +58,26 @@ header{
   background-color: rgb(160,196,50);
 }
 .snakehead-up {
-  background-image: url('/Assets/Images/snakeHead.png');
+  background-image: url('../Assets/Images/snakeHead.png');
   background-size: 100%;
   transform: rotate(180deg);
 }
 .snakehead-down {
-  background-image: url('/Assets/Images/snakeHead.png');
+  background-image: url('../Assets/Images/snakeHead.png');
   background-size: 100%;
 }
 .snakehead-left {
-  background-image: url('/Assets/Images/snakeHead.png');
+  background-image: url('../Assets/Images/snakeHead.png');
   background-size: 100%;
   transform: rotate(90deg);
 }
 .snakehead-right {
-  background-image: url('/Assets/Images/snakeHead.png');
+  background-image: url('../Assets/Images/snakeHead.png');
   background-size: 100%;
   transform: rotate(270deg);
 }
 .snakehead-null {
-  background-image: url('/Assets/Images/snakeHead.png');
+  background-image: url('../Assets/Images/snakeHead.png');
   background-size: 100%;
   transform: rotate(270deg);
 }
