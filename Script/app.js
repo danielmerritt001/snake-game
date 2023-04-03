@@ -17,6 +17,7 @@ let score = 0
 let win = false
 let loss = false 
 let piece = null
+let intervalNum = 250
 let movementID
 
 scoreEl.innerHTML= `Score: ${score}`
@@ -46,7 +47,7 @@ function init() {
   score = 0
   scoreEl.innerHTML = `Score: ${score}`
   clearInterval(movementID)
-  movementID = setInterval(snakeMovement, 500) 
+  movementID = setInterval(snakeMovement, intervalNum) 
   newPiece()
   render()
 }
