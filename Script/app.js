@@ -10,6 +10,8 @@ let messageEl = document.getElementById('message')
 let sqEl =document.querySelectorAll('.sq')
 let winLoseMessage = document.getElementById('win-loss-message')
 let playAgainEl = document.getElementById('play-again')
+let eatSound = new Audio("../Assets/Audio/eatSound.mp3")
+let bonk = new Audio("../Assets/Audio/bonkSound.mp3")
 
 /*----------constants----------*/
 let snake= {
@@ -74,6 +76,7 @@ function render() {
       sq.removeAttribute(" piece")
       newPiece()
       scoreEl.innerHTML= `Score: ${score}`
+      eatingSound()
     } 
     if (sq.id === piece) {
       sq.className += " piece"
@@ -111,13 +114,24 @@ function checkWin(){
 
 function renderMessage(){
   if (loss === true) {
+    deathCry()
     messageEl.className = "visible"
     winLoseMessage.innerText = "Game Over. But that's ok."
   }
   if (win === true) {
     messageEl.className = "visible"
-    winLoseMessage = "You Win!!! I don't expect many to see this."
+    winLoseMessage.innerText = "You Won??? Kudos, I guess"
   }
+}
+
+function eatingSound() {
+  eatSound.volume = .25
+  eatSound.play()
+}
+
+function deathCry() {
+  bonk.volume = .25
+  bonk.play()
 }
 /*----------movement functions----------*/
 function up() {
