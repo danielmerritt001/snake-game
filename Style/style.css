@@ -10,27 +10,43 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
 }
 #title{
-  background-color: green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../Assets/Images/woodenSign.png");
+  text-align: center;
+  background-size: 135px;
   height: 75px;
-  width: 150px;
+  width: 135px;
 }
+
+#game-name {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 42px;
+}
+
 #score-reset {
-  height: 75px;
+  height: 65px;
   width: 150px;
 }
 #score {
-  font-size: 33px;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 28px;
   text-align: center;
-  border: solid white;
+  border: solid rgb(218,177,108);
   color: white;
-  background-color: black;
+  background-image: url("../Assets/Images/chalkboard.jpg");
+  background-size: 100%;
 }
 #reset {
   height: 30px;
   width: 100%;
+  background-color: aquamarine;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 #board{
@@ -82,23 +98,43 @@ header{
   transform: rotate(270deg);
 }
 
+#win-loss-message{
+  color: white;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 42px;
+  margin-bottom: 0;
+}
+#play-again{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 18px;
+  width:fit-content;
+  margin: 0 auto;
+}
 .visible {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  background-color: white;
+  background-image: url("../Assets/Images/chalkboard.jpg");
+  background-size: 100%;
   z-index: 25;
   margin: -600px auto 0;
   text-align: center;
   width: 500px;
   height: 150px;
   visibility: visible;
+  border: solid rgb(218,177,108);
 }
 .hidden {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  background-color: white;
+  background-image: url("../Assets/Images/chalkboard.jpg");
+  background-size: 100%;
   z-index: 25;
   margin: -600px auto 0;
   text-align: center;
   width: 500px;
   height: 150px;
   visibility: hidden;
+  border: solid rgb(218,177,108);
 }
