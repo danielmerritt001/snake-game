@@ -14,6 +14,7 @@ let bonk = new Audio("../Assets/Audio/bonkSound.mp3")
 /*----------constants----------*/
 let snake= {
   direction: null,
+  nextDirection: null,
   size: ["8H"]
 }
 let score = 0
@@ -41,6 +42,7 @@ init()
 function init() {
   snake.size =["8H"]
   snake.direction= null
+  snake.nextDirection=null
   score = 0
   scoreEl.innerHTML = `Score: ${score}`
   clearInterval(movementID)
@@ -138,22 +140,22 @@ function deathCry() {
 /*----------movement functions----------*/
 function up() {
   if (snake.direction !== "down") {
-    snake.direction = "up"
+    snake.nextDirection = "up"
   }
 }
 function down() {
   if (snake.direction !== "up") {
-    snake.direction = "down"
+    snake.nextDirection = "down"
   }
 }
 function left() {
   if (snake.direction !== "right") {
-    snake.direction = "left"
+    snake.nextDirection = "left"
   }
 }
 function right() {
   if (snake.direction !== "left") {
-    snake.direction = "right"
+    snake.nextDirection = "right"
   }
 }
 function changeDirection(key) {
@@ -174,6 +176,7 @@ function snakeMovement(){
     clearInterval(movementID)
     return
   }
+  snake.direction = snake.nextDirection
   if (snake.direction === "up") {
     let letter = snake.size[0].slice(-1)
     let newLetter = String.fromCharCode(letter.codePointAt(0) - 1)
