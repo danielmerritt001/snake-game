@@ -26,7 +26,6 @@ let movementID
 scoreEl.innerHTML= `Score: ${score}`
 /*---------event listeners----*/
 let keyPress = document.addEventListener('keydown', (event) => {
-      //prevent the arrow keys from moving the page
   if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(event.code) > -1) {
     event.preventDefault();
   }
@@ -81,7 +80,22 @@ function render() {
 function newPiece () {
   let number = Math.floor(Math.random() * 16 + 1)
   let letter = String.fromCharCode(Math.floor(Math.random() * 16 + 65))
-  piece = number.toString() + letter
+  let possiblePiece = number.toString() + letter
+  if (snake.size.includes(possiblePiece)) {
+    pieceInSnake()
+  } else {
+    piece = possiblePiece
+  }
+}
+function pieceInSnake () {
+  let number = Math.floor(Math.random() * 16 + 1)
+  let letter = String.fromCharCode(Math.floor(Math.random() * 16 + 65))
+  let possiblePiece = number.toString() + letter
+  if (snake.size.includes(possiblePiece)) {
+    newPiece()
+  } else {
+    piece = possiblePiece
+  }
 }
 
 /*----------Win/Lose mechanics and Sound Effects----------*/
