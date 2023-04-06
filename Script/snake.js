@@ -10,6 +10,7 @@ import {
   loss,
   piece,
   render,
+  movementID,
 } from "./app.js"
 
 /*----------snake----------*/

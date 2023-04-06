@@ -8,6 +8,7 @@ export {
   loss,
   piece,
   render,
+  movementID,
 }
 /*-----cached elements-----*/
 let scoreEl = document.getElementById('score')
@@ -35,18 +36,20 @@ document.addEventListener('keydown', (event) => {
     event.preventDefault();
   }
   changeDirection(event.key)
-}, false)
+})
     
 resetEl.addEventListener('click', init)
 playAgainEl.addEventListener('click', playAgain)
 /*----------Losing Positions----------*/
 let losingBlocks = ["0A", "0B", "0C", "0D", "0E", "0F", "0E", "0F", "0G", "0H", "0I", "0J", "0K", "0L", "0M", "0N", "0O", "0P", "17A", "17B", "17C", "17D", "17E", "17F", "17G", "17H", "17I", "17J", "17K", "17L", "17M", "17N", "17O", "17P","1@", "2@", "3@", "4@", "5@", "6@", "7@", "8@", "9@", "10@", "11@", "12@", "13@", "14@", "15@", "16@", "1Q", "2Q", "3Q", "4Q", "5Q", "5Q", "6Q", "7Q", "8Q", "9Q", "10Q", "11Q", "12Q", "13Q", "14Q", "15Q", "16Q"]
-/*----------init and reset functions----------*/
+/*----------init, reset, and render functions----------*/
 init()
 function init() {
   snake.size =["8H"]
   snake.direction= null
   snake.nextDirection=null
+  win = false
+  loss = false
   score = 0
   scoreEl.innerHTML = `Score: ${score}`
   clearInterval(movementID)
@@ -118,18 +121,18 @@ function checkLoss() {
   })
 }
 function checkWin(){
-  if (snake.size.length === 256) {
+  if (snake.size.length === 2) {
     win = true
   }
 }
 function renderMessage(){
   if (loss === true) {
     deathCry()
-    messageEl.className = "visible"
+    messageEl.className = "visible animate__animated animate__bounceInDown"
     winLoseMessage.innerText = "Game Over. But that's ok."
   }
   if (win === true) {
-    messageEl.className = "visible"
+    messageEl.className = "visible animate__animated animate__bounceInDown"
     winLoseMessage.innerText = "You Won??? Kudos, I guess"
   }
 }
