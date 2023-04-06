@@ -48,6 +48,10 @@ header{
   background-color: aquamarine;
   font-family: 'Cabin Sketch', cursive;
 }
+#reset:hover {
+  background-color: rgb(194, 251, 232);
+  cursor: pointer;
+}
 
 #board{
   display: grid;
