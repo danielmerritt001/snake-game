@@ -114,6 +114,9 @@ header{
   width:fit-content;
   margin: 0 auto;
 }
+#play-again:hover {
+  cursor: pointer;
+}
 .visible {
   display: flex;
   flex-direction: column;
