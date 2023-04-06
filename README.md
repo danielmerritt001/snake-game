@@ -5,6 +5,10 @@ We all love the classic game of snake. So, why not try my version? Using the arr
 But beware of running into the walls or, worst of all, yourself. Most will find this inevitable for:
 >"...no matter where you run, you just end up running into yourself." Truman Capote, *Breakfast at Tiffany's* 
 ## Attributions
+Font:
+Cabin Sketch by Google Fonts
+https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap
+
 Background image:
 Image by brgfx</a> on Freepik
 https://www.freepik.com/free-vector/giant-tree-hilltop_6023851.htm#query=cartoon%20garden&position=42&from_view=keyword&track=ais
