@@ -33,6 +33,7 @@ https://www.freesoundslibrary.com/chips-crisps-crunch-sound-effect/
 - HTML5
 - CSS
 - JavaScript
+- Git
 
 ## Next Steps
 - [ ] Make a Dark Mode with unique background, piece, and snake assets.

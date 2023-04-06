@@ -1,4 +1,3 @@
-// IDEA!!! CHANGE THE MOVEMENT FUNCTIONS TO EXIST WITHIN THE INTERVAL FUNCTION SO THAT PEOPLE CANT CHEAT AND GO THROUGH THEMSELVES
 
 /*-----cached elements-----*/
 let boardEl = document.getElementById('board')

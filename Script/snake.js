@@ -28,9 +28,12 @@ function changeDirection() {
   // }
   console.log("sanity")
 }
-
-// export {
-//   changeDirection,
-//   snake,
-// }
+function exportCheck() {
+  console.log('sanity')
+}
+export {
+  changeDirection,
+  snake,
+  exportCheck
+}
 
