@@ -26,7 +26,7 @@ Images created by kerismaker
 https://www.flaticon.com/free-icons/snake
 
 chalkboard:
-https://www.freepik.com/free-photo/halloween-party_9164228.htm#query=chalkboard%20background&position=1&from_view=keyword&track=ais"
+https://www.freepik.com/free-photo/halloween-party_9164228.htm#query=chalkboard%20background&position=1&from_view=keyword&track=ais
 
 SoundEffects:
 by Spanac
