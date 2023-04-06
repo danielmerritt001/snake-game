@@ -7,7 +7,7 @@ But beware of running into the walls or, worst of all, yourself. Most will find 
 ## Attributions
 Font:
 Cabin Sketch by Google Fonts
-https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap
+https://fonts.google.com/specimen/Cabin+Sketch?query=cabin+sketch
 
 Background image:
 Image by brgfx</a> on Freepik
