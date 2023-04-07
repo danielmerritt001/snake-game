@@ -121,7 +121,7 @@ function checkLoss() {
   })
 }
 function checkWin(){
-  if (snake.size.length === 2) {
+  if (snake.size.length === 256) {
     win = true
   }
 }
