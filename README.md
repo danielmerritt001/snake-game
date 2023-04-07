@@ -1,5 +1,5 @@
-# A Snake and His Apple: snake-game by danielmerritt001 <img width="1440" alt="Screenshot 2023-04-05 at 11 46 51 AM" src="https://user-images.githubusercontent.com/121991938/230158267-aeb7fe00-196c-4f40-b390-61c1d39dde10.png">
-### Play the Game: https://snake-game-dmerritt001.netlify.app/
+# A Snake and His Apple: <img width="1440" alt="Screenshot 2023-04-05 at 11 46 51 AM" src="https://user-images.githubusercontent.com/121991938/230158267-aeb7fe00-196c-4f40-b390-61c1d39dde10.png">
+### Play the Game [Here](https://snake-game-dmerritt001.netlify.app/)
 ## About
 We all love the classic game of snake. So, why not try my version? Using the arrow keys, you can control the snake to eat more and more apples until you grow bigger and bigger.
 But beware of running into the walls or, worst of all, yourself. Most will find this inevitable for:
