@@ -6,32 +6,27 @@ But beware of running into the walls or, worst of all, yourself. Most will find 
 >"...no matter where you run, you just end up running into yourself." Truman Capote, *Breakfast at Tiffany's* 
 ## Attributions
 Font:
-Cabin Sketch by Google Fonts
-https://fonts.google.com/specimen/Cabin+Sketch?query=cabin+sketch
+Cabin Sketch by [Google Fonts](https://fonts.google.com/specimen/Cabin+Sketch?query=cabin+sketch)
+
 
 Background image:
-Image by brgfx</a> on Freepik
-https://www.freepik.com/free-vector/giant-tree-hilltop_6023851.htm#query=cartoon%20garden&position=42&from_view=keyword&track=ais
+Image by brgfx on [Freepik](https://www.freepik.com/free-vector/giant-tree-hilltop_6023851.htm#query=cartoon%20garden&position=42&from_view=keyword&track=ais)
+
 
 Favicon:
-Snake icon by Icons8
-https://icons8.com/icons/set/favicon-snake
+Snake icon by [Icons8](https://icons8.com/icons/set/favicon-snake)
 
 Apple image:
-Image by brgfx
-https://www.freepik.com/free-vector/
+Image by brgfx on [Freepik](https://www.freepik.com/free-vector/)
 
 Snake head:
-Images created by kerismaker
-https://www.flaticon.com/free-icons/snake
+Images created by [kerismaker](https://www.flaticon.com/free-icons/snake)
 
-chalkboard:
-https://www.freepik.com/free-photo/halloween-party_9164228.htm#query=chalkboard%20background&position=1&from_view=keyword&track=ais
+Chalkboard:
+Image by [Freepik](https://www.freepik.com/free-photo/halloween-party_9164228.htm#query=chalkboard%20background&position=1&from_view=keyword&track=ais)
 
 SoundEffects:
-by Spanac
-https://www.freesoundslibrary.com/bonk-sound-effect/
-https://www.freesoundslibrary.com/chips-crisps-crunch-sound-effect/
+[bonk](https://www.freesoundslibrary.com/bonk-sound-effect/) and [apple](https://www.freesoundslibrary.com/chips-crisps-crunch-sound-effect/) by SPANAC
 
 ## Technologies Used
 - HTML5
