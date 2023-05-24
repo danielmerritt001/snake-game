@@ -159,7 +159,23 @@ header{
   .sq {
     height: 28px;
     width: 28px;
-    border: solid rgba(0, 0, 0, 0.5);
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body{
+    background-size: 200%;
+  }
+  #board{
+    margin:20px auto;
+    width: 304px;
+    justify-items: center;
+    grid-template-columns: repeat(16, 19px [col-start]);
+  }
+  .sq {
+    height: 17px;
+    width: 17px;
     display: inline;
   }
 }
