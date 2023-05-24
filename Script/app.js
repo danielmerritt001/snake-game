@@ -39,7 +39,7 @@ document.addEventListener('keydown', (event) => {
   changeDirection(event.key)
 })
 
-document.addEventListener('click', (event) => {
+keyPad.addEventListener('click', (event) => {
   changeDirection(event.target.id)
 })
 
