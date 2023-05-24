@@ -45,11 +45,11 @@ header{
 #reset {
   height: 30px;
   width: 100%;
-  background-color: aquamarine;
+  background-color: rgb(218,177,108 , .9);
   font-family: 'Cabin Sketch', cursive;
 }
 #reset:hover {
-  background-color: rgb(194, 251, 232);
+  background-color: rgb(243, 211, 157, .9);
   cursor: pointer;
 }
 
@@ -113,9 +113,11 @@ header{
   font-size: 18px;
   width:fit-content;
   margin: 0 auto;
+  background-color: rgb(218,177,108 );
 }
 #play-again:hover {
   cursor: pointer;
+  background-color: rgb(243, 211, 157)
 }
 .visible {
   display: flex;
