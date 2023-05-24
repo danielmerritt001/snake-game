@@ -161,6 +161,7 @@ header{
   margin: auto;
   height: 40px;
   width: 60px;
+  visibility: hidden;
 }
 
 #ArrowUp {
@@ -211,6 +212,12 @@ header{
     visibility: hidden;
     border: solid rgb(218,177,108);
     margin: 0, auto;
+  }
+  #ArrowUp, #ArrowDown, #ArrowLeft, #ArrowRight{
+    margin: auto;
+    height: 40px;
+    width: 60px;
+    visibility: visible;
   }
 }
 

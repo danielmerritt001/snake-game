@@ -37,4 +37,4 @@ SoundEffects:
 ## Next Steps
 - [ ] Make a Dark Mode with unique background, piece, and snake assets.
 - [ ] Make a Zombie Mode where player is a zombie horde chasing brains.
-- [ ] Implement mobile compatibility.
+- [x] Implement mobile compatibility.
