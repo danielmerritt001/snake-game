@@ -163,6 +163,27 @@ header{
   }
 }
 
+#phone-keys {
+  margin: auto;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+
+#ArrowUp, #ArrowDown, #ArrowLeft, #ArrowRight{
+  margin: auto;
+  height: 30px;
+  width: 40px;
+}
+
+#ArrowUp {
+  margin-bottom: 3px;
+}
+
 @media screen and (max-width: 480px) {
   body{
     background-size: 200%;

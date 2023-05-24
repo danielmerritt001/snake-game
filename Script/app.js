@@ -19,6 +19,7 @@ let winLoseMessage = document.getElementById('win-loss-message')
 let playAgainEl = document.getElementById('play-again')
 let eatSound = new Audio("../Assets/Audio/eatSound.mp3")
 let bonk = new Audio("../Assets/Audio/bonkSound.mp3")
+let keyPad = document.getElementById('phone-keys')
 
 /*----------constants----------*/
 
@@ -37,7 +38,11 @@ document.addEventListener('keydown', (event) => {
   }
   changeDirection(event.key)
 })
-    
+
+document.addEventListener('click', (event) => {
+  changeDirection(event.target.id)
+})
+
 resetEl.addEventListener('click', init)
 playAgainEl.addEventListener('click', playAgain)
 /*----------Losing Positions----------*/
