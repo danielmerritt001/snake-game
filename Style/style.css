@@ -145,3 +145,21 @@ header{
   visibility: hidden;
   border: solid rgb(218,177,108);
 }
+
+@media screen and (max-width: 640px) {
+  body{
+    background-size: 200%;
+  }
+  #board{
+    margin:20px auto;
+    width: 480px;
+    justify-items: center;
+    grid-template-columns: repeat(16, 30px [col-start]);
+  }
+  .sq {
+    height: 28px;
+    width: 28px;
+    border: solid rgba(0, 0, 0, 0.5);
+    display: inline;
+  }
+}
