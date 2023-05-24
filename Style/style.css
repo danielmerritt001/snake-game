@@ -165,7 +165,7 @@ header{
 
 #phone-keys {
   margin: auto;
-  width: 160px;
+  width: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,8 +176,8 @@ header{
 
 #ArrowUp, #ArrowDown, #ArrowLeft, #ArrowRight{
   margin: auto;
-  height: 30px;
-  width: 40px;
+  height: 40px;
+  width: 60px;
 }
 
 #ArrowUp {
