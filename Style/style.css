@@ -204,7 +204,7 @@ header{
     background-image: url("../Assets/Images/chalkboard.jpg");
     background-size: 100%;
     z-index: 25;
-    margin: -600px auto 0;
+    margin: -400px auto 0;
     text-align: center;
     width: 300px;
     height: 150px;
@@ -251,12 +251,11 @@ header{
     background-image: url("../Assets/Images/chalkboard.jpg");
     background-size: 100%;
     z-index: 25;
-    margin: -600px auto 0;
+    margin: -300px auto 0;
     text-align: center;
     width: 300px;
     height: 150px;
     visibility: hidden;
     border: solid rgb(218,177,108);
-    margin: 0, auto;
   }
 }
