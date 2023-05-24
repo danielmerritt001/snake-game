@@ -146,23 +146,6 @@ header{
   border: solid rgb(218,177,108);
 }
 
-@media screen and (max-width: 640px) {
-  body{
-    background-size: 200%;
-  }
-  #board{
-    margin:20px auto;
-    width: 480px;
-    justify-items: center;
-    grid-template-columns: repeat(16, 30px [col-start]);
-  }
-  .sq {
-    height: 28px;
-    width: 28px;
-    display: inline;
-  }
-}
-
 #phone-keys {
   margin: auto;
   width: 260px;
@@ -184,6 +167,53 @@ header{
   margin-bottom: 3px;
 }
 
+@media screen and (max-width: 640px) {
+  body{
+    background-size: 200%;
+  }
+  #board{
+    margin:20px auto;
+    width: 480px;
+    justify-items: center;
+    grid-template-columns: repeat(16, 30px [col-start]);
+  }
+  .sq {
+    height: 28px;
+    width: 28px;
+    display: inline;
+  }
+  .visible {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url("../Assets/Images/chalkboard.jpg");
+    background-size: 100%;
+    z-index: 25;
+    margin: -600px auto 0;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    visibility: visible;
+    border: solid rgb(218,177,108);
+    margin: 0, auto;
+  }
+  .hidden {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url("../Assets/Images/chalkboard.jpg");
+    background-size: 100%;
+    z-index: 25;
+    margin: -600px auto 0;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    visibility: hidden;
+    border: solid rgb(218,177,108);
+    margin: 0, auto;
+  }
+}
+
 @media screen and (max-width: 480px) {
   body{
     background-size: 200%;
@@ -198,5 +228,35 @@ header{
     height: 17px;
     width: 17px;
     display: inline;
+  }
+  .visible {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url("../Assets/Images/chalkboard.jpg");
+    background-size: 100%;
+    z-index: 25;
+    margin: -600px auto 0;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    visibility: visible;
+    border: solid rgb(218,177,108);
+    margin: 0, auto;
+  }
+  .hidden {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url("../Assets/Images/chalkboard.jpg");
+    background-size: 100%;
+    z-index: 25;
+    margin: -600px auto 0;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    visibility: hidden;
+    border: solid rgb(218,177,108);
+    margin: 0, auto;
   }
 }
